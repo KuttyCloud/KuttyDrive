@@ -7,18 +7,32 @@
 
 const environment = 'production'; // This Variable Decides the environment of the app. 'production' or 'development' or 'local'
  
-const serviceaccounts = [];
+const serviceaccounts = [
+	{
+  "type": "service_account",
+  "project_id": "kuttybots-452316",
+  "private_key_id": "af394b99e91dd6202667339dbc0ed8a0e2a5d5b1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCtPF+EwMMQRKOi\nf87plop7WEX3uTnuaOSpIgWAHPkaHU/j1UbDYdYOqZ5cefR3FbfQtgY2PU7G+FN9\nLNgKO7dY3vea7GYHtHEm0Dw64tWDPdfXAv+GTYrHXJ5CYKNsBa7uMqW4UPFSKOIM\nnHXH+WjGdXtkEih0eKLu8LviydsyRmfp3+VUCVTFYyxKfjoE2rjB1Bz8CF0D4QBn\n8Vzrqno3mC6Vge4RdfHqHvKBq+h5vBsbruYcnKidSxdIPww7lkO0DYZfhMpWcL08\nls6PamSInNArMKMW/B7H5xLp5Tsi1qm4fwN/zIOs0H/3kbtUuLCRsUZhYa0zh1x8\nkUwTdqLJAgMBAAECggEAAiaLoq9YQemG5Nj0gGAFouoxtNV9k4kFUlfcB3RfSkn0\nCIZzXQW9UswbwsGifYpNOx/QsW0u6cJCRRL2BqB+/PEy/onHQCVnDzM1at9khP8o\nS2DGkSFWzZ/yeK1QR2JwWBV/CwFO5vUfeJvGTDUmLhUzctv/2RGjUiyLueZwHG5l\nNKjOGkp33BDzemTHfbttybRcUFwERHW0oGe1T7DUmo24u8kb4UkdGMzv9iElbAQM\nx8d7RfPpn1BX1fOSvqPqFHePpi01wdqw9LTX1nTb8dgPdxagiOvXG3vpmfd5ruIe\nARskeq20Ko+Fp1rZVIVFGN+7J9zpCdbewLmq0dEsgQKBgQDzhMCrf0n7TdjuBsy6\nzykWdJV3xgw6pqVa1CPkMMVOpvDBCXzl7xVEMPakjQhM5SJOam7fTUiLLsJ/AJlQ\nKS/N8mFT0ejqFcq2Vx7OHZgFCbzG7K9QOVTens972oV5KR4BO2+Ju+mN3USK7i8B\ncBMC9HRlgxjspg8YzoN/9W8GiQKBgQC2HW3cN2w00yN+X01eAoIxbcqOpMV5nEBr\nCt+uCzglpjXnUS0FEsci9cwAUbD9n7o/SAvAMKFdroZYXTrmMeu6DFwAgBIM91LH\n+IrkvTmjUarx/cmurZo8XHrdIrOKYMgwvlussOxevpMZwlnUz6otbLrPiFXyRMKg\nKL4zfLeqQQKBgQCn3bZXQjrEgohspMFScWW4dgtm8l4RvDi2YRCQx9Hrgwbpetnf\nQy1cwYf0LMgxAa7hcVsWkZbVYxluJQKKkKnEhTX0avntC7KeeXXhzeKybmD0m8nK\nOos3nzAWB7AEsoRdgxRDVQcN5R7PypsamaBxZAQsye9PirVTe2CIv66WSQKBgEuK\nCXe+xXNj4OUaQs0r3TUDhXGFhyPaXB4KdJ2Mqc10FAfO9A2WrGMj8WpweCm7h1WY\nXMdrZIOnULJ2eWfibRTO65qJhPM742pu/a3Dj5Te2zllO7Lo74D6Gzx+mFpdqqwN\nSZloCaODCSE2LGzJdp1A7HwI4R2Mx+4G+F4C7WwBAoGALqjXJLq4SC/CwJFzrBPF\nWX5bhNpHSsMvXindhvoY+jQYfuOVUI6nXUc1Mf6A2u/I/e/6IfORRLyO6FTqlcbp\nYDQfvuAyyu/KDsqKHaMGjA3Netb3kyaM9IbXykXcfHpyiz+6NAFPJo4+gsTJAGEj\nVVFwzzDK0XgpkBZVJftURCc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "kuttycloud@kuttybots-452316.iam.gserviceaccount.com",
+  "client_id": "115250482010971762159",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/kuttycloud%40kuttybots-452316.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
+];
 const randomserviceaccount = serviceaccounts[Math.floor(Math.random() * serviceaccounts.length)]; // DO NOT TOUCH THIS
 const domains_for_dl = [''] // add multiple cloudflare addresses to balance the load on download/stream servers, eg. ['https://testing.fetchgoogleapi.workers.dev', 'https://testing2.fetchgoogleapi2.workers.dev']
 const domain_for_dl = domains_for_dl[Math.floor(Math.random() * domains_for_dl.length)]; // DO NOT TOUCH THIS
 const blocked_region = ['']; // add regional codes seperated by comma, eg. ['IN', 'US', 'PK']
 const blocked_asn = []; // add ASN numbers from http://www.bgplookingglass.com/list-of-autonomous-system-numbers, eg. [16509, 12345]
 const authConfig = {
-  "siteName": "Google Drive Index", // Website name
-  "client_id": "", // Client id from Google Cloud Console
-  "client_secret": "", // Client Secret from Google Cloud Console
+  "siteName": "Kutty Drive", // Website name
+  "client_id": "455657050337-gt84luq928rp7skbv1o65q8v0cig2vp0.apps.googleusercontent.com", // Client id from Google Cloud Console
+  "client_secret": "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", // Client Secret from Google Cloud Console
   "refresh_token": "", // Authorize token
-  "service_account": false, // true if you're using Service Account instead of user account
+  "service_account": true, // true if you're using Service Account instead of user account
   "service_account_json": randomserviceaccount, // don't touch this one
   "files_list_page_size": 100,
   "search_result_list_page_size": 100,
@@ -50,8 +64,8 @@ const authConfig = {
   ],
   "roots": [
     {
-      "id": "",
-      "name": "00-MUST-HAVE",
+      "id": "1WoenAgdFXfyW69Ni4TTn6FHjbngw1nRn",
+      "name": "KuttyClouds",
       "protect_file_link": false
   },
   ]
