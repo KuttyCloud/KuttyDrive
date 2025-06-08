@@ -58,18 +58,34 @@ const authConfig = {
       "password": "admin",
     },
     {
-      "username": "admin1",
-      "password": "admin1",
+      "username1": "admin1",
+      "password1": "admin1",
+    }
+		{
+      "username2": "admin2",
+      "password2": "admin2",
     }
   ],
-  "roots": [
-    {
-      "id": "1WoenAgdFXfyW69Ni4TTn6FHjbngw1nRn",
-      "name": "KuttyClouds",
-      "protect_file_link": false
-  },
-  ]
-};
+      "roots":[
+      {
+          "id": "root",
+          "name": "Drive One",
+          "protect_file_link": false,
+          "auth": {"username":"password"} /* Remove double slash before "auth" to activate id password protection */
+      },
+      {
+          "id": "root",
+          "name": "Drive Two",
+          "protect_file_link": false,
+          "auth": {"username1":"password1"} /* Remove double slash before "auth" to activate id password protection */
+      },
+			{
+          "id": "root",
+          "name": "Drive Three",
+          "protect_file_link": false,
+          "auth": {"username2":"password2"} /* Remove double slash before "auth" to activate id password protection */
+      },
+    ]};
 const crypto_base_key = "3225f86e99e205347b4310e437253bfd" // Example 256 bit key used, generate your own.
 const hmac_base_key = "4d1fbf294186b82d74fff2494c04012364200263d6a36123db0bd08d6be1423c" // Example 256 bit key used, generate your own.
 const encrypt_iv = new Uint8Array([247, 254, 106, 195, 32, 148, 131, 244, 222, 133, 26, 182, 20, 138, 215, 81]); // Example 128 bit IV used, generate your own.
